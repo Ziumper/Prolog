@@ -141,8 +141,8 @@ matka_troj(Odp,_,ImieDziecka) :-
 siostra_troj(Odp,ImieSiostry,ImieCzlonkaRodziny):-
     siostra(ImieSiostry,ImieCzlonkaRodziny) ->
        string_chars(Odp,[t,a,k]) ;
-       count(siostra(_,ImieCzlonkaRodziny),LicznikSiostry), %czy ten goœæ ma jak¹kolwiek siostrê?
-       LicznikSiostry > 0 -> string_chars(Odp,[n,i,e]) ; string_chars(Odp,[b,r,a,k,' ',d,a,n,y,c,h]).
+          count(siostra(_,ImieCzlonkaRodziny),LicznikSiostry), %czy ten goœæ ma jak¹kolwiek siostrê?
+          LicznikSiostry > 0 -> string_chars(Odp,[n,i,e]) ; string_chars(Odp,[b,r,a,k,' ',d,a,n,y,c,h]).
 
 
 
