@@ -22,6 +22,13 @@ count(P,Count) :-
         findall(1,P,L),
         length(L,Count).
 
+%dziadek_troj(nie,A,B):- dziadek(C,B), A \== C.
+dziadek_troj(nie,A,B):- dziecko(B,A).
+dziadek_troj(tak,A,B):- dziadek(A,B).
+dziadek_troj(Odp,_,_):-
+        string_chars(Odp,[b,r,a,k,' ',d,a,n,y,c,h]).
+
+%dziadek_troj(X,A,B):- dziadek_troj(X,A,B),!.
 
 
 siostra_troj(Odp,ImieSiostry,ImieCzlonkaRodziny):-
